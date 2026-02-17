@@ -1,0 +1,23 @@
+name: My First Git Hub Action pipeline
+
+on: 
+  push: 
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  hello-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Print a message
+        run: echo "Welcome to GitHub Actions"
+
+      
+    
+  
+  
