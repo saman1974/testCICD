@@ -28,3 +28,9 @@ jobs:
 
       - name: Run Python File
         run: python python.py
+      
+      - name: Run Commands
+        run : |
+          echo "hello"
+          echo "bye"
+          echo "text"
