@@ -17,7 +17,8 @@ jobs:
       - name: Print a message
         run: echo "Welcome to GitHub Actions"
 
-      
+      - name: Get System Information
+        run: echo "System information: $(whoami) $(hostname -I) $(pwd)"      
     
   
   
