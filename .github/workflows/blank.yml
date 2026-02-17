@@ -1,10 +1,10 @@
 name: My First Git Hub Action pipeline
 
-on: 
-  push: 
-    branches: [ "main" ]
+on:
+  push:
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   hello-job:
@@ -18,7 +18,4 @@ jobs:
         run: echo "Welcome to GitHub Actions"
 
       - name: Get System Information
-        run: echo "System information: $(whoami) $(hostname -I) $(pwd)"      
-    
-  
-  
+        run: echo "$(hostname -I) $(whoami) $(pwd)"
