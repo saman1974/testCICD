@@ -1,3 +1,4 @@
+
 name: My First Git Hub Action pipeline
 
 on:
@@ -14,8 +15,16 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
+      - name: Setup Python 
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
       - name: Print a message
         run: echo "Welcome to GitHub Actions"
 
       - name: Get System Information
         run: echo "$(hostname -I) $(whoami) $(pwd)"
+
+      - name: Run Python File
+        run: python python.py
